@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv-="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+        <div class="'container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hey! I'm <span>Asbin</span><br>Khanal.</h1>
+            </div>
+        </div>
+    </div>
+    <!--------------about------------>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>An enthusiastic and dedicated undergrad biotechnology student at Kathmandu University.<br>Hardworking and ambitious enthusiast with a great passion for creative learning. 
+                        I believe <br>to have excellent communication skills, enabling me to effectively communicate and work <br>with a wide range of people, with minimal supervision. Always use the full 
+                        potential to learn, <br>and explore and grow skills and knowledge.</p>
+                
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Photoshop</span><br>Banners, Posters and Flyers</li>
+                            <li><span>InDesign</span><br>Magazine, Brochures and Booklets</li>
+                            <li><span>Microsoft Office</span><br>Familiar with MS Office tools and packages</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>December 2018 - June 2019</span><br>Charter President | Leo Club Okhaldhunga</li>
+                            <li><span>June 2020 - July 2021</span><br>Region Coordinator | District BOD | Leo District 
+                                Council 325 A2</li>
+                            <li><span>August 2020 - August 2021</span><br>Designer | Magazine | Heredity Generation I</li>
+                            <li><span>March 2021 - August 2022</span><br>Vice President | KUBiC</li>
+                            <li><span>June 2021 - Current</span><br>Designer | Magazine | Heredity Generation II</li>
+                            <li><span>March 2021 - March 2022</span><br>Head of Designing | Hult Prize at 
+                                Kathmandu University</li>
+                            <li><span>September 2021 - Current</span><br>Graphic Designer | Nepal Journal of 
+                                Biotechnology (NJB)</li>
+                            <li><span>February 2022 - Current</span><br>Vice President | Finance and Legalities | AIESEC in Kathmandu University </li>
+                            <li><span>March 2022</span><br>Event Manager | World’s Largest Lesson (WLL) | AIESEC Nepal</li>
+                            <li><span>June 2022 - Current</span><br>District Treasurer | District BOD | Leo District 
+                                Council 325 F</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Reliance Public School</span><br>School Leaving Certificate (2010-2016)</li>
+                            <li><span>Trinity International College and HSS</span><br>+2 Science (2016-2018)</li>
+                            <li><span>Kathmandu University</span><br>Bachelors of Technology in Biotechnology (2019-Current)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------services-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Soon</h2>
+                <p>Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>very Soon</h2>
+                <p>Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Very VerySoon</h2>
+                <p>Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------portfolio----------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>UPDATE LOADING</h3>
+                    <p>This section will be updated very soon. Stay connected for more updates! </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>UPDATE LOADING</h3>
+                    <p>This section will be updated very soon. Stay connected for more updates! </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>UPDATE LOADING</h3>
+                    <p>This section will be updated very soon. Stay connected for more updates! </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!--------------contact----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> asbin.khanal@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +977 9843805350</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/asbin.khanal.9/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/asbin_khanal"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/asbin-khanal/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Asbin. <br>Made with <i class="fa-solid fa-heart"></i> by Asbin Khanal.</p>
+    </div>
+</div>
+
+
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQU9mZWTMs5XC0c_eJw2644BGhQN5mjtj8Cq-_Gdf3iDCQLChdSQ9mXWkdj8IUsd0S/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully."
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    </body>
+    </html>
