@@ -1,232 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio Website</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="images/logo.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Student</p>
-                <h1>Hey! I'm <span>Asbin</span><br>Khanal.</h1>
-            </div>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asbin Khanal | Biotechnology & Leadership</title>
+  <meta name="description" content="Asbin Khanal – Biotechnology graduate, researcher, and youth leadership professional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --card: #16161a;
+      --text: #eaeaea;
+      --muted: #a1a1aa;
+      --accent: #ff004f;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Layout */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: radial-gradient(circle at top, #1b1b22, #0b0b0d);
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(11,11,13,0.8);
+      backdrop-filter: blur(8px);
+      z-index: 10;
+    }
+
+    nav .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+    }
+
+    .hero span { color: var(--accent); }
+
+    .hero p {
+      max-width: 600px;
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero .cta {
+      margin-top: 32px;
+      display: inline-block;
+      padding: 14px 36px;
+      border-radius: 30px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      transition: transform 0.2s;
+    }
+
+    .cta:hover { transform: translateY(-3px); }
+
+    /* Sections */
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 24px;
+    }
+
+    /* Cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 28px;
+      border-radius: 16px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: #1f1f26;
+    }
+
+    .card i {
+      font-size: 32px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    /* Timeline */
+    .timeline {
+      border-left: 2px solid var(--accent);
+      padding-left: 24px;
+    }
+
+    .timeline-item {
+      margin-bottom: 32px;
+    }
+
+    .timeline-item span {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      background: #111;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--accent); }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <strong>Asbin Khanal</strong>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>Hi, I'm <span>Asbin Khanal</span></h1>
+    <p>
+      Biotechnology graduate, researcher, and youth leadership professional with experience
+      leading national and international teams through AIESEC.
+    </p>
+    <a href="#projects" class="cta">View My Work</a>
+  </div>
+</header>
+
+<section id="about" class="container">
+  <h2>About Me</h2>
+  <p>
+    I am a Biotechnology graduate from Kathmandu University with hands-on experience in wet lab,
+    dry lab, and bioinformatics techniques, combined with strong leadership and financial
+    management experience through AIESEC.
+  </p>
+</section>
+
+<section id="work" class="container">
+  <h2>Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <span>2024 – 2025</span>
+      <h3>Country Director – AIESEC Nepal</h3>
+      <p>Led national teams, improved financial sustainability, and expanded exchange programs.</p>
     </div>
-    <!--------------about------------>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.png">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p> I am a Biotechnology graduate from Kathmandu University with strong experience in youth leadership, research, and organisational development. I have led national and international teams through AIESEC, driving sustainable impact, financial accountability, and strategic growth. <br>
-                        <br> My interests lie at the intersection of biotechnology research, bioinformatics, and leadership development, with hands-on experience in wet lab, dry lab, and project execution across diverse environments. 
-                    </p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Photoshop</span><br>Banners, Posters and Flyers</li>
-                            <li><span>InDesign</span><br>Magazine, Brochures and Booklets</li>
-                            <li><span>Microsoft Office</span><br>Familiar with MS Office tools and packages</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>December 2018 - June 2019</span><br>Charter President | Leo Club Okhaldhunga</li>
-                            <li><span>June 2020 - July 2021</span><br>Region Coordinator | District BOD | Leo District 
-                                Council 325 A2</li>
-                            <li><span>August 2020 - August 2021</span><br>Designer | Magazine | Heredity Generation I</li>
-                            <li><span>March 2021 - August 2022</span><br>Vice President | KUBiC</li>
-                            <li><span>June 2021 - Current</span><br>Designer | Magazine | Heredity Generation II</li>
-                            <li><span>March 2021 - March 2022</span><br>Head of Designing | Hult Prize at 
-                                Kathmandu University</li>
-                            <li><span>September 2021 - Current</span><br>Graphic Designer | Nepal Journal of 
-                                Biotechnology (NJB)</li>
-                            <li><span>February 2022 - Current</span><br>Vice President | Finance and Legalities | AIESEC in Kathmandu University </li>
-                            <li><span>March 2022</span><br>Event Manager | World’s Largest Lesson (WLL) | AIESEC Nepal</li>
-                            <li><span>June 2022 - Current</span><br>District Treasurer | District BOD | Leo District 
-                                Council 325 F</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Reliance Public School</span><br>School Leaving Certificate (2010-2016)</li>
-                            <li><span>Trinity International College and HSS</span><br>+2 Science (2016-2018)</li>
-                            <li><span>Kathmandu University</span><br>Bachelors of Technology in Biotechnology (2019-Current)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="timeline-item">
+      <span>2023 – 2024</span>
+      <h3>Local President – AIESEC Kathmandu University</h3>
+      <p>Oversaw operations, legal compliance, and leadership development initiatives.</p>
     </div>
-    <!---------------services-------------->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fa-solid fa-code"></i>
-                <h2>Soon</h2>
-                <p>Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fas fa-crop-alt"></i>
-                <h2>very Soon</h2>
-                <p>Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon</p>
-                <a href="#">Learn more</a>
-            </div>
-            <div>
-                <i class="fab fa-app-store"></i>
-                <h2>Very VerySoon</h2>
-                <p>Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated </p>
-                <a href="#">Learn more</a>
-            </div>
-        </div>
+  </div>
+</section>
+
+<section id="projects" class="container">
+  <h2>Selected Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <i class="fas fa-dna"></i>
+      <h3>Antimicrobial Research</h3>
+      <p>Computational and wet-lab evaluation of secondary metabolites for antimicrobial activity.</p>
     </div>
-</div>
-<!-------------portfolio----------->
-<div id="portfolio">
-    <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/work-1.png">
-                <div class="layer">
-                    <h3>UPDATE LOADING</h3>
-                    <p>This section will be updated very soon. Stay connected for more updates! </p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-2.png">
-                <div class="layer">
-                    <h3>UPDATE LOADING</h3>
-                    <p>This section will be updated very soon. Stay connected for more updates! </p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/work-3.png">
-                <div class="layer">
-                    <h3>UPDATE LOADING</h3>
-                    <p>This section will be updated very soon. Stay connected for more updates! </p>
-                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn">See more</a>
+    <div class="card">
+      <i class="fas fa-microscope"></i>
+      <h3>Molecular Docking Studies</h3>
+      <p>Docking analysis of therapeutic ligands using AutoDock Vina and bioinformatics tools.</p>
     </div>
-</div>
-<!--------------contact----------->
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i> asbin.khanal@gmail.com</p>
-                <p><i class="fa-solid fa-square-phone"></i> +977 9843805350</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/asbin.khanal.9/"><i class="fab fa-facebook"></i></a>
-                    <a href="https://twitter.com/asbin_khanal"><i class="fab fa-twitter-square"></i></a>
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/asbin-khanal/"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-        </div>
+    <div class="card">
+      <i class="fas fa-users"></i>
+      <h3>Youth Leadership Programs</h3>
+      <p>Designed and executed leadership programs impacting 3,000+ students across Nepal.</p>
     </div>
-    <div class="copyright">
-        <p>Copyright © Asbin. <br>Made with <i class="fa-solid fa-heart"></i> by Asbin Khanal.</p>
-    </div>
-</div>
+  </div>
+</section>
 
+<section id="contact" class="container">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:asbin.khanal@gmail.com">asbin.khanal@gmail.com</a></p>
+  <p>
+    <a href="https://www.linkedin.com/in/asbin-khanal/" target="_blank">LinkedIn</a> ·
+    <a href="https://bit.ly/asbin_records" target="_blank">Projects</a>
+  </p>
+</section>
 
+<footer>
+  <p>© 2026 Asbin Khanal · Built with focus & clarity</p>
+</footer>
 
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(event, tabname){
-            for(let tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for(let tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
-
-    <script>
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-
-
-    </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQU9mZWTMs5XC0c_eJw2644BGhQN5mjtj8Cq-_Gdf3iDCQLChdSQ9mXWkdj8IUsd0S/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully."
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-
-    </body>
-
-    </html>
-
+</body>
+</html>
