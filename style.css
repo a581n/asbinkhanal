@@ -1,150 +1,389 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asbin Khanal | Biotechnology • Leadership • Research</title>
-  <meta name="description" content="Personal website of Asbin Khanal – Biotechnology graduate, researcher, and youth leadership professional." />
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-  <!-- Icons -->
-  <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
+.logo{
+    width: 140px;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
 
-<!-- ================= NAV ================= -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <div class="logo">Asbin<span>.</span></div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content:' ';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+/*-------------about---------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-<!-- ================= HERO ================= -->
-<header class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>Asbin <span>Khanal</span></h1>
-      <h2>Biotechnology • Research • Youth Leadership</h2>
-      <p>
-        Bridging science, leadership, and impact — from molecular research
-        to leading national and international youth organizations.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn primary">View Work</a>
-        <a href="images/my-cv.pdf" class="btn outline" download>Download CV</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <img src="images/profile.jpg" alt="Asbin Khanal" />
-    </div>
-  </div>
-</header>
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section">
-  <div class="container split">
-    <div class="about-image">
-      <img src="images/about.jpg" alt="Research & Leadership" />
-    </div>
-    <div class="about-text">
-      <h3>About Me</h3>
-      <p>
-        I am a Biotechnology graduate from Kathmandu University with hands-on
-        experience in wet lab, dry lab, and bioinformatics techniques. Alongside
-        my scientific background, I have led large-scale youth leadership and
-        organizational development initiatives through AIESEC.
-      </p>
-      <p>
-        My work sits at the intersection of research, leadership, and execution —
-        turning ideas into measurable impact.
-      </p>
-    </div>
-  </div>
-</section>
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
 
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience" class="section dark">
-  <div class="container">
-    <h3 class="center">Experience & Leadership</h3>
-    <div class="timeline">
-      <div class="timeline-card">
-        <span>2024 – 2025</span>
-        <h4>Country Director – AIESEC Nepal</h4>
-        <p>Led national teams, financial sustainability, and international exchange programs.</p>
-      </div>
-      <div class="timeline-card">
-        <span>2023 – 2024</span>
-        <h4>Local President – AIESEC Kathmandu University</h4>
-        <p>Oversaw operations, compliance, and leadership development initiatives.</p>
-      </div>
-      <div class="timeline-card">
-        <span>2022 – 2023</span>
-        <h4>National Head – Finance & Legalities</h4>
-        <p>Strengthened financial systems and organizational governance nationwide.</p>
-      </div>
-    </div>
-  </div>
-</section>
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: ' ';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
 
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="section">
-  <div class="container">
-    <h3 class="center">Selected Work</h3>
-    <div class="cards">
-      <div class="project-card">
-        <img src="images/project1.jpg" alt="Antimicrobial Research" />
-        <div class="project-info">
-          <h4>Antimicrobial Research</h4>
-          <p>In-silico and wet lab evaluation of secondary metabolites.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/project2.jpg" alt="Molecular Docking" />
-        <div class="project-info">
-          <h4>Molecular Docking</h4>
-          <p>Docking analysis of therapeutic ligands using AutoDock Vina.</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="images/project3.jpg" alt="Youth Leadership" />
-        <div class="project-info">
-          <h4>Youth Leadership Programs</h4>
-          <p>Designed programs impacting 3,000+ students across Nepal.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+.tab-links.active-link::after{
+    width: 50%;   
+}
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section dark">
-  <div class="container center">
-    <h3>Let’s Connect</h3>
-    <p>Interested in collaboration, research, or leadership initiatives?</p>
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/asbin-khanal/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:asbin.khanal@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </div>
-</section>
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
 
-<footer>
-  <p>© 2026 Asbin Khanal · Built with intent & clarity</p>
-</footer>
+/*----------------services---------*/
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f;
+    transform: translateY(-10px);
+}
+/*--------portfolio----------*/
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.3s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.2s;
+}
+.btn:hover{
+    background: #ff004f;
+}
 
-</body>
-</html>
+/*------------contact---------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    }
+    form .btn2{
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    .copyright{
+        width: 100%;
+        text-align: center;
+        padding: 25px 0;
+        background: #262626;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+    .copyright i{
+        color: #ff004f;
+    }
+    /*-----------------css for small screens---------*/
+nav .fas{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+
+}
