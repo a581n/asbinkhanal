@@ -1,232 +1,150 @@
-/* =============================
-   Asbin Khanal – Professional Portfolio CSS
-   Clean, scalable, production-ready
-   ============================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asbin Khanal | Biotechnology • Leadership • Research</title>
+  <meta name="description" content="Personal website of Asbin Khanal – Biotechnology graduate, researcher, and youth leadership professional." />
 
-:root {
-  --bg: #0b0b0d;
-  --bg-soft: #111114;
-  --card: #16161a;
-  --text: #eaeaea;
-  --muted: #a1a1aa;
-  --accent: #ff004f;
-  --radius: 16px;
-}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
 
-html {
-  scroll-behavior: smooth;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+<!-- ================= NAV ================= -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">Asbin<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Asbin <span>Khanal</span></h1>
+      <h2>Biotechnology • Research • Youth Leadership</h2>
+      <p>
+        Bridging science, leadership, and impact — from molecular research
+        to leading national and international youth organizations.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn primary">View Work</a>
+        <a href="images/my-cv.pdf" class="btn outline" download>Download CV</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/profile.jpg" alt="Asbin Khanal" />
+    </div>
+  </div>
+</header>
 
-/* =============================
-   Layout
-   ============================= */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 96px 24px;
-}
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container split">
+    <div class="about-image">
+      <img src="images/about.jpg" alt="Research & Leadership" />
+    </div>
+    <div class="about-text">
+      <h3>About Me</h3>
+      <p>
+        I am a Biotechnology graduate from Kathmandu University with hands-on
+        experience in wet lab, dry lab, and bioinformatics techniques. Alongside
+        my scientific background, I have led large-scale youth leadership and
+        organizational development initiatives through AIESEC.
+      </p>
+      <p>
+        My work sits at the intersection of research, leadership, and execution —
+        turning ideas into measurable impact.
+      </p>
+    </div>
+  </div>
+</section>
 
-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 32px;
-  font-weight: 600;
-}
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section dark">
+  <div class="container">
+    <h3 class="center">Experience & Leadership</h3>
+    <div class="timeline">
+      <div class="timeline-card">
+        <span>2024 – 2025</span>
+        <h4>Country Director – AIESEC Nepal</h4>
+        <p>Led national teams, financial sustainability, and international exchange programs.</p>
+      </div>
+      <div class="timeline-card">
+        <span>2023 – 2024</span>
+        <h4>Local President – AIESEC Kathmandu University</h4>
+        <p>Oversaw operations, compliance, and leadership development initiatives.</p>
+      </div>
+      <div class="timeline-card">
+        <span>2022 – 2023</span>
+        <h4>National Head – Finance & Legalities</h4>
+        <p>Strengthened financial systems and organizational governance nationwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-/* =============================
-   Navigation
-   ============================= */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(11, 11, 13, 0.75);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-}
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section">
+  <div class="container">
+    <h3 class="center">Selected Work</h3>
+    <div class="cards">
+      <div class="project-card">
+        <img src="images/project1.jpg" alt="Antimicrobial Research" />
+        <div class="project-info">
+          <h4>Antimicrobial Research</h4>
+          <p>In-silico and wet lab evaluation of secondary metabolites.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.jpg" alt="Molecular Docking" />
+        <div class="project-info">
+          <h4>Molecular Docking</h4>
+          <p>Docking analysis of therapeutic ligands using AutoDock Vina.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="images/project3.jpg" alt="Youth Leadership" />
+        <div class="project-info">
+          <h4>Youth Leadership Programs</h4>
+          <p>Designed programs impacting 3,000+ students across Nepal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-.nav-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section dark">
+  <div class="container center">
+    <h3>Let’s Connect</h3>
+    <p>Interested in collaboration, research, or leadership initiatives?</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/asbin-khanal/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:asbin.khanal@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 28px;
-}
+<footer>
+  <p>© 2026 Asbin Khanal · Built with intent & clarity</p>
+</footer>
 
-nav a {
-  font-weight: 500;
-  color: var(--muted);
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--accent);
-}
-
-/* =============================
-   Hero
-   ============================= */
-header.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: radial-gradient(circle at top, #1b1b22, #0b0b0d);
-}
-
-.hero h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.hero span {
-  color: var(--accent);
-}
-
-.hero p {
-  max-width: 620px;
-  margin-top: 24px;
-  font-size: 1.1rem;
-  color: var(--muted);
-}
-
-.cta {
-  display: inline-block;
-  margin-top: 36px;
-  padding: 14px 40px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(255, 0, 79, 0.25);
-}
-
-/* =============================
-   Cards / Grid
-   ============================= */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-}
-
-.card {
-  background: var(--card);
-  padding: 32px;
-  border-radius: var(--radius);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  background: #1f1f26;
-}
-
-.card i {
-  font-size: 32px;
-  color: var(--accent);
-  margin-bottom: 18px;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-}
-
-.card p {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-/* =============================
-   Timeline
-   ============================= */
-.timeline {
-  border-left: 2px solid var(--accent);
-  padding-left: 32px;
-}
-
-.timeline-item {
-  margin-bottom: 36px;
-}
-
-.timeline-item span {
-  font-size: 0.9rem;
-  color: var(--accent);
-}
-
-.timeline-item h3 {
-  margin-top: 8px;
-  font-size: 1.1rem;
-}
-
-.timeline-item p {
-  margin-top: 6px;
-  color: var(--muted);
-}
-
-/* =============================
-   Contact
-   ============================= */
-#contact p {
-  margin-bottom: 12px;
-}
-
-#contact a {
-  color: var(--accent);
-}
-
-/* =============================
-   Footer
-   ============================= */
-footer {
-  background: var(--bg-soft);
-  padding: 48px 24px;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* =============================
-   Responsive
-   ============================= */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.4rem;
-  }
-
-  nav ul {
-    gap: 16px;
-  }
-
-  .container {
-    padding: 72px 20px;
-  }
-}
+</body>
+</html>
