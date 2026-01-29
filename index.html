@@ -1,559 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asbin Khanal | Biotechnology & Leadership</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
         <div class="container">
-            <a href="#home" class="logo-link">
-                <div class="logo-container">
-                    <img src="images/logo.png" class="logo" alt="Asbin Khanal Logo">
-                    <div class="logo-ring"></div>
-                    <div class="logo-ring logo-ring-2"></div>
-                </div>
-                <span class="logo-text">ASBIN KHANAL</span>
-            </a>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fas fa-times close-menu"></i>
-            </ul>
-            <i class="fas fa-bars menu-toggle"></i>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Hey! I'm <span class="typewriter-text">Asbin</span><br>Khanal
-                </h1>
-                <p class="hero-description">
-                    Biotechnology Graduate | Youth Leader | Graphic Designer
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#work" class="btn btn-secondary">View My Work</a>
-                </div>
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hey! I'm <span>Asbin</span><br>Khanal.</h1>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    </div>
+    <!--------------about------------>
+    <div id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-photos">
-                    <div class="photo-slider">
-                        <!-- Upload these 4 photos to images folder -->
-                        <div class="slide active">
-                            <img src="images/about-1.jpg" alt="Asbin Photo 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 500\"><rect width=\"400\" height=\"500\" fill=\"%23262626\"/><text x=\"200\" y=\"250\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\">Photo 1</text></svg>'">
-                        </div>
-                        <div class="slide">
-                            <img src="images/about-2.jpg" alt="Asbin Photo 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 500\"><rect width=\"400\" height=\"500\" fill=\"%23262626\"/><text x=\"200\" y=\"250\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\">Photo 2</text></svg>'">
-                        </div>
-                        <div class="slide">
-                            <img src="images/about-3.jpg" alt="Asbin Photo 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 500\"><rect width=\"400\" height=\"500\" fill=\"%23262626\"/><text x=\"200\" y=\"250\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\">Photo 3</text></svg>'">
-                        </div>
-                        <div class="slide">
-                            <img src="images/about-4.jpg" alt="Asbin Photo 4" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 400 500\"><rect width=\"400\" height=\"500\" fill=\"%23262626\"/><text x=\"200\" y=\"250\" font-family=\"Arial\" font-size=\"24\" fill=\"white\" text-anchor=\"middle\">Photo 4</text></svg>'">
-                        </div>
-                        <div class="slider-dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
                 </div>
-                <div class="about-text">
-                    <h3>Biotechnology Professional & Youth Leader</h3>
-                    <p>
-                        I am a Biotechnology graduate from Kathmandu University with strong experience in youth leadership, research, and organisational development. I have led national and international teams through AIESEC, driving sustainable impact, financial accountability, and strategic growth.
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> I am a Biotechnology graduate from Kathmandu University with strong experience in youth leadership, research, and organisational development. I have led national and international teams through AIESEC, driving sustainable impact, financial accountability, and strategic growth. <br>
+                        <br> My interests lie at the intersection of biotechnology research, bioinformatics, and leadership development, with hands-on experience in wet lab, dry lab, and project execution across diverse environments. 
                     </p>
-                    <p>
-                        My interests lie at the intersection of biotechnology research, bioinformatics, and leadership development, with hands-on experience in wet lab, dry lab, and project execution across diverse environments.
-                    </p>
-                    <div class="about-info">
-                        <div class="info-item">
-                            <span class="info-label">Email:</span>
-                            <span class="info-value">asbin.khanal@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Phone:</span>
-                            <span class="info-value">+977 9843805350</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Location:</span>
-                            <span class="info-value">Kathmandu, Nepal</span>
-                        </div>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Photoshop</span><br>Banners, Posters and Flyers</li>
+                            <li><span>InDesign</span><br>Magazine, Brochures and Booklets</li>
+                            <li><span>Microsoft Office</span><br>Familiar with MS Office tools and packages</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>December 2018 - June 2019</span><br>Charter President | Leo Club Okhaldhunga</li>
+                            <li><span>June 2020 - July 2021</span><br>Region Coordinator | District BOD | Leo District 
+                                Council 325 A2</li>
+                            <li><span>August 2020 - August 2021</span><br>Designer | Magazine | Heredity Generation I</li>
+                            <li><span>March 2021 - August 2022</span><br>Vice President | KUBiC</li>
+                            <li><span>June 2021 - Current</span><br>Designer | Magazine | Heredity Generation II</li>
+                            <li><span>March 2021 - March 2022</span><br>Head of Designing | Hult Prize at 
+                                Kathmandu University</li>
+                            <li><span>September 2021 - Current</span><br>Graphic Designer | Nepal Journal of 
+                                Biotechnology (NJB)</li>
+                            <li><span>February 2022 - Current</span><br>Vice President | Finance and Legalities | AIESEC in Kathmandu University </li>
+                            <li><span>March 2022</span><br>Event Manager | World’s Largest Lesson (WLL) | AIESEC Nepal</li>
+                            <li><span>June 2022 - Current</span><br>District Treasurer | District BOD | Leo District 
+                                Council 325 F</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Reliance Public School</span><br>School Leaving Certificate (2010-2016)</li>
+                            <li><span>Trinity International College and HSS</span><br>+2 Science (2016-2018)</li>
+                            <li><span>Kathmandu University</span><br>Bachelors of Technology in Biotechnology (2019-Current)</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Journey Section (Skills/Experience/Education) -->
-    <section id="journey" class="journey">
-        <div class="container">
-            <h2 class="section-title">My Journey</h2>
-            
-            <div class="accordion-container">
-                <!-- Skills Accordion -->
-                <div class="accordion-item active">
-                    <div class="accordion-header">
-                        <div class="accordion-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Skills & Expertise</h3>
-                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <h4><i class="fas fa-dna"></i> Biotechnology</h4>
-                                <ul>
-                                    <li>Research and Development</li>
-                                    <li>Dry Lab Techniques</li>
-                                    <li>Wet Lab Techniques</li>
-                                    <li>Molecular Biology</li>
-                                    <li>Bioinformatics</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h4><i class="fas fa-laptop-code"></i> Technical Skills</h4>
-                                <ul>
-                                    <li>Adobe Creative Suite</li>
-                                    <li>Graphic Design</li>
-                                    <li>Video Editing</li>
-                                    <li>Microsoft Office</li>
-                                    <li>Python Programming</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h4><i class="fas fa-flask"></i> Laboratory Skills</h4>
-                                <ul>
-                                    <li>PCR & Gel Electrophoresis</li>
-                                    <li>Microbiological Assays</li>
-                                    <li>Cell Culture Techniques</li>
-                                    <li>Molecular Docking</li>
-                                    <li>Spectrophotometry</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+    </div>
+    <!---------------services-------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Soon</h2>
+                <p>Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon Coming soon</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>very Soon</h2>
+                <p>Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon Coming very soon</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Very VerySoon</h2>
+                <p>Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated Will be updated </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------portfolio----------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>UPDATE LOADING</h3>
+                    <p>This section will be updated very soon. Stay connected for more updates! </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-
-                <!-- Experience Accordion -->
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <div class="accordion-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h3>Professional Experience</h3>
-                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-date">July 2025 - Present</div>
-                                <div class="timeline-content">
-                                    <h4>Country Director</h4>
-                                    <h5>AIESEC in Thailand</h5>
-                                    <p>Leading the organization of 200+ volunteers, promoting youth leadership programs in Thailand.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-date">July 2024 - July 2025</div>
-                                <div class="timeline-content">
-                                    <h4>Country Director</h4>
-                                    <h5>AIESEC in Nepal</h5>
-                                    <p>Led national team of 200 volunteers, increased membership engagement and facilitated 190+ exchange opportunities.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-date">Jan 2023 - Feb 2024</div>
-                                <div class="timeline-content">
-                                    <h4>Local President</h4>
-                                    <h5>AIESEC in Kathmandu University</h5>
-                                    <p>Led 54-member team across six departments, driving international exchange opportunities.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>UPDATE LOADING</h3>
+                    <p>This section will be updated very soon. Stay connected for more updates! </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-
-                <!-- Education Accordion -->
-                <div class="accordion-item">
-                    <div class="accordion-header">
-                        <div class="accordion-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Education</h3>
-                        <span class="accordion-arrow"><i class="fas fa-chevron-down"></i></span>
-                    </div>
-                    <div class="accordion-content">
-                        <div class="education-grid">
-                            <div class="education-item">
-                                <div class="education-icon">
-                                    <i class="fas fa-university"></i>
-                                </div>
-                                <div class="education-details">
-                                    <h4>B.Tech in Biotechnology</h4>
-                                    <h5>Kathmandu University</h5>
-                                    <p class="education-date">2019 - 2023 | CGPA: 3.29</p>
-                                    <p>Graduated with comprehensive knowledge in biotechnology research and applications.</p>
-                                </div>
-                            </div>
-                            <div class="education-item">
-                                <div class="education-icon">
-                                    <i class="fas fa-school"></i>
-                                </div>
-                                <div class="education-details">
-                                    <h4>+2 Science (Biology)</h4>
-                                    <h5>Trinity International College</h5>
-                                    <p class="education-date">2016 - 2018 | CGPA: 2.98</p>
-                                    <p>Completed higher secondary education in Science with focus on Biology.</p>
-                                </div>
-                            </div>
-                            <div class="education-item">
-                                <div class="education-icon">
-                                    <i class="fas fa-book"></i>
-                                </div>
-                                <div class="education-details">
-                                    <h4>School Leaving Certificate</h4>
-                                    <h5>Reliance Public School</h5>
-                                    <p class="education-date">2010 - 2016 | GPA: 3.80</p>
-                                    <p>Achieved top academic performance in secondary education.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>UPDATE LOADING</h3>
+                    <p>This section will be updated very soon. Stay connected for more updates! </p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Work Portfolio Section -->
-    <section id="work" class="work">
-        <div class="container">
-            <h2 class="section-title">My Work & Projects</h2>
-            
-            <div class="work-slider-container">
-                <div class="work-slider">
-                    <!-- Project 1 -->
-                    <div class="work-item">
-                        <div class="work-image">
-                            <img src="images/work-1.jpg" alt="Molecular Docking Project" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23ff004f\"/><text x=\"150\" y=\"100\" font-family=\"Arial\" font-size=\"18\" fill=\"white\" text-anchor=\"middle\">Project 1</text></svg>'">
-                            <div class="work-overlay">
-                                <h3>Molecular Docking Analysis</h3>
-                                <p>In-silico analysis of therapeutic ligands</p>
-                                <a href="https://drive.google.com/drive/folders/YOUR_PROJECT_LINK_1" target="_blank" class="work-link">
-                                    View on Drive <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 2 -->
-                    <div class="work-item">
-                        <div class="work-image">
-                            <img src="images/work-2.jpg" alt="STR Profile Project" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23333\"/><text x=\"150\" y=\"100\" font-family=\"Arial\" font-size=\"18\" fill=\"white\" text-anchor=\"middle\">Project 2</text></svg>'">
-                            <div class="work-overlay">
-                                <h3>STR Profile Generation</h3>
-                                <p>Short Tandem Repeat profile analysis</p>
-                                <a href="https://drive.google.com/drive/folders/YOUR_PROJECT_LINK_2" target="_blank" class="work-link">
-                                    View on Drive <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 3 -->
-                    <div class="work-item">
-                        <div class="work-image">
-                            <img src="images/work-3.jpg" alt="Antimicrobial Research" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23ff004f\"/><text x=\"150\" y=\"100\" font-family=\"Arial\" font-size=\"18\" fill=\"white\" text-anchor=\"middle\">Project 3</text></svg>'">
-                            <div class="work-overlay">
-                                <h3>Antimicrobial Research</h3>
-                                <p>Evaluation via computational methods</p>
-                                <a href="https://drive.google.com/drive/folders/YOUR_PROJECT_LINK_3" target="_blank" class="work-link">
-                                    View on Drive <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 4 -->
-                    <div class="work-item">
-                        <div class="work-image">
-                            <img src="images/work-4.jpg" alt="Graphic Design" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23333\"/><text x=\"150\" y=\"100\" font-family=\"Arial\" font-size=\"18\" fill=\"white\" text-anchor=\"middle\">Project 4</text></svg>'">
-                            <div class="work-overlay">
-                                <h3>Graphic Design Portfolio</h3>
-                                <p>Magazines, banners, posters design</p>
-                                <a href="https://drive.google.com/drive/folders/YOUR_PROJECT_LINK_4" target="_blank" class="work-link">
-                                    View on Drive <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Project 5 -->
-                    <div class="work-item">
-                        <div class="work-image">
-                            <img src="images/work-5.jpg" alt="Leadership Projects" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 300 200\"><rect width=\"300\" height=\"200\" fill=\"%23ff004f\"/><text x=\"150\" y=\"100\" font-family=\"Arial\" font-size=\"18\" fill=\"white\" text-anchor=\"middle\">Project 5</text></svg>'">
-                            <div class="work-overlay">
-                                <h3>Leadership Initiatives</h3>
-                                <p>AIESEC programs and youth development</p>
-                                <a href="https://drive.google.com/drive/folders/YOUR_PROJECT_LINK_5" target="_blank" class="work-link">
-                                    View on Drive <i class="fas fa-external-link-alt"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!--------------contact----------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> asbin.khanal@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i> +977 9843805350</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/asbin.khanal.9/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/asbin_khanal"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/asbin-khanal/"><i class="fab fa-linkedin"></i></a>
                 </div>
-                
-                <div class="slider-controls">
-                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download Resume</a>
             </div>
-            
-            <div class="text-center">
-                <a href="https://drive.google.com/drive/folders/YOUR_ALL_PROJECTS" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i> View All Projects on Drive
-                </a>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Asbin. <br>Made with <i class="fa-solid fa-heart"></i> by Asbin Khanal.</p>
+    </div>
+</div>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">My Services</h2>
-            <p class="section-subtitle">Hover over each service to see detailed capabilities</p>
-            
-            <div class="services-grid">
-                <!-- Dry Lab Services -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-dna"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Dry Lab Services</h3>
-                        <p class="service-desc">Computational biology and bioinformatics solutions</p>
-                        <div class="service-details">
-                            <ul>
-                                <li><i class="fas fa-check"></i> Molecular Docking Analysis</li>
-                                <li><i class="fas fa-check"></i> Bioinformatics Research</li>
-                                <li><i class="fas fa-check"></i> Phylogenetic Analysis</li>
-                                <li><i class="fas fa-check"></i> Python Programming</li>
-                                <li><i class="fas fa-check"></i> Data Analysis & Visualization</li>
-                            </ul>
-                            <a href="#contact" class="service-btn">Request Service</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Graphic Design Services -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Graphic Design</h3>
-                        <p class="service-desc">Creative design solutions for all media</p>
-                        <div class="service-details">
-                            <ul>
-                                <li><i class="fas fa-check"></i> Logo & Brand Identity</li>
-                                <li><i class="fas fa-check"></i> Magazine & Brochure Design</li>
-                                <li><i class="fas fa-check"></i> Banner & Poster Design</li>
-                                <li><i class="fas fa-check"></i> Social Media Graphics</li>
-                                <li><i class="fas fa-check"></i> Book & Publication Design</li>
-                            </ul>
-                            <a href="#contact" class="service-btn">Request Service</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Leadership & Training -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Leadership Training</h3>
-                        <p class="service-desc">Youth development and organizational leadership</p>
-                        <div class="service-details">
-                            <ul>
-                                <li><i class="fas fa-check"></i> Youth Leadership Programs</li>
-                                <li><i class="fas fa-check"></i> Team Building Workshops</li>
-                                <li><i class="fas fa-check"></i> Organizational Development</li>
-                                <li><i class="fas fa-check"></i> Project Management Training</li>
-                                <li><i class="fas fa-check"></i> Strategic Planning</li>
-                            </ul>
-                            <a href="#contact" class="service-btn">Request Service</a>
-                        </div>
-                    </div>
-                </div>
+    <script>
 
-                <!-- Wet Lab Services -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Wet Lab Services</h3>
-                        <p class="service-desc">Laboratory research and analysis</p>
-                        <div class="service-details">
-                            <ul>
-                                <li><i class="fas fa-check"></i> Molecular Biology Techniques</li>
-                                <li><i class="fas fa-check"></i> Microbiological Assays</li>
-                                <li><i class="fas fa-check"></i> Cell Culture & Viability Tests</li>
-                                <li><i class="fas fa-check"></i> Biochemical Analysis</li>
-                                <li><i class="fas fa-check"></i> Sample Testing & Validation</li>
-                            </ul>
-                            <a href="#contact" class="service-btn">Request Service</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="section-subtitle">Let's work together on your next project</p>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Email</h3>
-                            <p>asbin.khanal@gmail.com</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Phone</h3>
-                            <p>+977 9843805350</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Location</h3>
-                            <p>Kathmandu, Nepal</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/asbin.khanal.9" target="_blank" class="social-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/its_me_asbin/" target="_blank" class="social-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/asbin-khanal/" target="_blank" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://twitter.com/asbin_khanal" target="_blank" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
-                    
-                    <a href="Asbin Khanal - 2025.pdf" download class="btn btn-secondary">
-                        <i class="fas fa-download"></i> Download My CV
-                    </a>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            <i class="fas fa-user"></i>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Your Contact Number" required>
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                            <i class="fas fa-comment"></i>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                        
-                        <div id="formMessage" class="form-message"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        function opentab(event, tabname){
+            for(let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Logo" class="footer-logo-img">
-                    <h3>Asbin Khanal</h3>
-                    <p>Biotechnology & Leadership Professional</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#journey">Journey</a></li>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#services">Services</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Asbin Khanal. All rights reserved.</p>
-                <p>Made with <i class="fas fa-heart"></i> by Asbin Khanal</p>
-            </div>
-        </div>
-    </footer>
+    </script>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
-</body>
-</html>
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyQU9mZWTMs5XC0c_eJw2644BGhQN5mjtj8Cq-_Gdf3iDCQLChdSQ9mXWkdj8IUsd0S/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully."
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
+    </body>
+
+    </html>
+
