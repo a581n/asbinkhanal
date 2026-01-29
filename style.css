@@ -31,6 +31,18 @@ nav{
 
 .logo{
     width: 140px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* wrapper link */
+.logo-link{
+    display: inline-block;
+}
+
+/* hover animation (desktop) */
+.logo-link:hover .logo{
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 12px rgba(255, 0, 79, 0.6));
 }
 
 nav ul li{
@@ -387,3 +399,4 @@ nav .fas{
     display: block;
 
 }
+
