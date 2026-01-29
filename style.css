@@ -1,100 +1,45 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
-html{scroll-behavior:smooth}
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
 body{background:#080808;color:#fff}
-
 .container{padding:10px 10%}
-
-/* NAV */
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo{width:120px}
+html{scroll-behavior:smooth}
+.logo{width:140px}
 .pop-logo:hover{transform:scale(1.1);transition:.3s}
-
-/* MENU */
+nav{display:flex;justify-content:space-between;align-items:center}
 nav ul li{display:inline-block;margin:10px 20px}
 nav ul li a{color:#fff;text-decoration:none;position:relative}
-nav ul li a::after{
-  content:'';width:0;height:3px;background:#ff004f;
-  position:absolute;left:0;bottom:-6px;transition:.4s
-}
+nav ul li a::after{content:'';width:0;height:3px;background:#ff004f;position:absolute;left:0;bottom:-6px;transition:.5s}
 nav ul li a:hover::after{width:100%}
-
-/* HEADER */
-#header{
-  height:100vh;
-  background:url(images/background.png) center/cover;
-}
+#header{height:100vh;background:url(images/background.png) center/cover}
 .header-text{margin-top:20%}
 .header-text h1{font-size:60px}
-#typewriter{color:#ff004f;border-right:2px solid #ff004f}
-
-/* ABOUT */
+#typewriter{color:#ff004f;border-right:2px solid #ff004f;padding-right:4px}
 #about{padding:80px 0;color:#ababab}
 .row{display:flex;flex-wrap:wrap;justify-content:space-between}
 .about-col-1{flex-basis:35%}
 .about-col-2{flex-basis:60%}
 .about-col-1 img{width:100%;border-radius:15px}
-
-/* EXPERIENCE */
-.experience-wrapper{display:flex;gap:40px}
-.exp-menu{flex-basis:30%}
-.exp-item{
-  background:#262626;padding:15px;margin-bottom:15px;
-  cursor:pointer;transition:.3s
-}
-.exp-item.active,.exp-item:hover{background:#ff004f}
-.exp-content{flex-basis:65%}
-.exp-detail{display:none}
-.exp-detail.active{display:block}
-
-/* WORK */
-.work-slider{
-  display:flex;gap:30px;overflow:hidden;
-  animation:scroll 30s linear infinite
-}
-.work-card img{width:280px;border-radius:10px}
-@keyframes scroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
-}
-
-/* SERVICES */
-.services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px}
-.service-card{perspective:1000px;height:200px}
-.service-card div{
-  background:#262626;border-radius:10px;
-  position:absolute;width:100%;height:100%;
-  display:flex;align-items:center;justify-content:center;
-  backface-visibility:hidden;transition:.6s
-}
+.sub-title{font-size:50px;margin-bottom:30px}
+.tab-wrapper{display:flex;gap:40px}
+.tab-menu{flex-basis:30%}
+.tab-item{background:#262626;padding:15px;margin-bottom:15px;cursor:pointer;transition:.4s}
+.tab-item.active,.tab-item:hover{background:#ff004f}
+.tab-content{flex-basis:65%}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.tab-panel ul li{margin:15px 0;list-style:none}
+.tab-panel ul li span{color:#ff004f}
+.work-slider{display:flex;gap:30px;overflow:hidden;animation:scroll 30s linear infinite}
+.work img{width:280px;border-radius:10px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.services-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px}
+.service-card{height:200px;perspective:1000px;position:relative}
+.service-card div{background:#262626;border-radius:10px;position:absolute;width:100%;height:100%;display:flex;align-items:center;justify-content:center;backface-visibility:hidden;transition:.6s;text-align:center;padding:20px}
 .service-card .back{transform:rotateY(180deg)}
 .service-card:hover .front{transform:rotateY(180deg)}
 .service-card:hover .back{transform:rotateY(0)}
-
-/* CONTACT */
-form input,textarea{
-  width:100%;padding:15px;margin:10px 0;
-  background:#262626;border:none;color:#fff;border-radius:6px
-}
-.btn{
-  border:1px solid #ff004f;
-  padding:12px 40px;color:#fff;
-  display:inline-block;margin-top:20px
-}
+form input,textarea{width:100%;background:#262626;border:none;color:#fff;padding:15px;margin:10px 0;border-radius:6px}
+.btn{border:1px solid #ff004f;color:#fff;padding:14px 40px;display:inline-block;margin-top:20px}
 .btn:hover{background:#ff004f}
-
-/* MOBILE */
-nav .fas{display:none}
-@media(max-width:600px){
-  .header-text h1{font-size:32px}
-  .row,.experience-wrapper{flex-direction:column}
-  nav ul{
-    position:fixed;right:-200px;top:0;height:100vh;
-    background:#ff004f;width:200px;padding-top:50px
-  }
-  nav .fas{display:block}
-}
+@media(max-width:600px){.row,.tab-wrapper{flex-direction:column}.header-text h1{font-size:32px}}
+</style>
