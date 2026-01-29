@@ -29,19 +29,24 @@ nav{
     flex-wrap: wrap;
 }
 
+/* ---------- Logo Interaction ---------- */
+.logo-link{
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 .logo{
     width: 140px;
-    transition: transform 0.5s ease, filter 0.5s ease;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.logo-link{
-    display: inline-block;
-}
-
+/* Desktop hover */
 .logo-link:hover .logo{
-    transform: scale(1.12);
-    filter: drop-shadow(0 0 12px rgba(255, 0, 79, 0.6));
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 0, 79, 0.7);
 }
+
 
 nav ul li{
     display: inline-block;
@@ -397,5 +402,6 @@ nav .fas{
     display: block;
 
 }
+
 
 
