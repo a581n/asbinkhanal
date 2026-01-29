@@ -390,6 +390,22 @@ nav .fas{
     #header{
         background-image: url(images/phone-background.png);
     }
+        /* Logo animation for mobile */
+    .logo-container {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo {
+        width: 100px;
+    }
+    
+    .logo-container:hover::after {
+        top: -5px;
+        left: -5px;
+        right: -5px;
+        bottom: -5px;
+    }
     .header-text{
         margin-top: 100%;
         font-size: 16px;
@@ -451,5 +467,6 @@ nav .fas{
     display: block;
 
 }
+
 
 
