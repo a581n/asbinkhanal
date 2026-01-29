@@ -1,28 +1,26 @@
+<!-- ==========================
+FILE 1: index.html
+========================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asbin Khanal | Portfolio</title>
-
 <link rel="stylesheet" href="style.css">
 <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <div id="header">
   <div class="container">
     <nav>
-      <a href="#about">
-        <img src="images/logo.png" class="logo pop-logo">
-      </a>
-
+      <a href="#about"><img src="images/logo.png" class="logo pop-logo"></a>
       <ul id="sidemenu">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">Summary</a></li>
-        <li><a href="#experience">Experience</a></li>
+        <li><a href="#affiliations">Profile</a></li>
         <li><a href="#portfolio">Work</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -37,64 +35,59 @@
   </div>
 </div>
 
-<!-- ================= SUMMARY ================= -->
+<!-- SUMMARY -->
 <div id="about">
   <div class="container">
     <div class="row">
-      <div class="about-col-1">
-        <img src="images/user.png">
-      </div>
+      <div class="about-col-1"><img src="images/user.png"></div>
       <div class="about-col-2">
         <h1 class="sub-title">Summary</h1>
         <p>
-          I am a <strong>Biotechnology graduate from Kathmandu University</strong> with a strong foundation in
-          biological research, bioinformatics, and interdisciplinary problem-solving.
-          Alongside my academic journey, I have spent over <strong>five years in youth leadership and organisational development</strong>,
-          primarily through AIESEC, where I have led national and international teams and driven impact-focused initiatives.
+          I am a <strong>Biotechnology graduate from Kathmandu University</strong> with a solid academic foundation in
+          biological research, bioinformatics, and interdisciplinary scientific work. Alongside my academic journey,
+          I have spent over <strong>five years in youth leadership and organisational development</strong> through AIESEC,
+          leading national and international teams and managing large-scale initiatives.
           <br><br>
-          My experience spans <strong>wet lab and dry lab research</strong>, molecular docking, and bioinformatics tools,
-          combined with extensive exposure to leadership roles across <strong>six countries</strong>.
-          I am motivated by opportunities where <strong>science, leadership, and global impact intersect</strong>.
+          My experience spans <strong>wet lab and dry lab research</strong>, molecular docking, and data-driven analysis,
+          combined with extensive exposure to leadership roles across <strong>six countries</strong>. I am driven by
+          opportunities where science, leadership, and global impact intersect.
         </p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ================= EXPERIENCE ================= -->
-<div id="experience">
+<!-- AFFILIATIONS / TABS -->
+<div id="affiliations">
   <div class="container">
-    <h1 class="sub-title">Experience</h1>
+    <h1 class="sub-title">My Profile</h1>
 
-    <div class="experience-wrapper">
-      <div class="exp-menu">
-        <div class="exp-item active" onclick="showExp(event,'aiesec')">AIESEC</div>
-        <div class="exp-item" onclick="showExp(event,'research')">Research</div>
-        <div class="exp-item" onclick="showExp(event,'education')">Education</div>
+    <div class="tab-wrapper">
+      <div class="tab-menu">
+        <div class="tab-item active" onclick="openTab(event,'org')">Organisations</div>
+        <div class="tab-item" onclick="openTab(event,'research')">Research</div>
+        <div class="tab-item" onclick="openTab(event,'education')">Education</div>
       </div>
 
-      <div class="exp-content">
-        <div id="aiesec" class="exp-detail active">
+      <div class="tab-content">
+        <div id="org" class="tab-panel active">
           <ul>
-            <li>Country Director – AIESEC Nepal & Thailand</li>
-            <li>Local President – AIESEC Kathmandu University</li>
-            <li>National Head – Finance & Legalities</li>
-            <li>Led national & international teams for 5+ years</li>
+            <li><span>AIESEC</span><br>Country Director (Nepal & Thailand), Local President (KU), National Finance & Legalities Head</li>
+            <li><span>Leo Clubs</span><br>District Treasurer, Charter President</li>
           </ul>
         </div>
 
-        <div id="research" class="exp-detail">
+        <div id="research" class="tab-panel">
           <ul>
-            <li>Wet Lab & Dry Lab Techniques</li>
-            <li>Molecular Docking & Bioinformatics</li>
-            <li>Antimicrobial Research Projects</li>
+            <li><span>Dry Lab</span><br>Molecular Docking, Bioinformatics Analysis</li>
+            <li><span>Wet Lab</span><br>Antimicrobial & Secondary Metabolite Research</li>
           </ul>
         </div>
 
-        <div id="education" class="exp-detail">
+        <div id="education" class="tab-panel">
           <ul>
-            <li>B.Tech Biotechnology – Kathmandu University</li>
-            <li>+2 Science – Trinity International College</li>
+            <li><span>Kathmandu University</span><br>B.Tech Biotechnology (Completed)</li>
+            <li><span>Trinity International College</span><br>+2 Science</li>
           </ul>
         </div>
       </div>
@@ -102,56 +95,35 @@
   </div>
 </div>
 
-<!-- ================= WORK ================= -->
+<!-- WORK -->
 <div id="portfolio">
   <div class="container">
     <h1 class="sub-title">My Work</h1>
-
     <div class="work-slider">
-      <a href="https://drive.google.com" target="_blank" class="work-card">
-        <img src="images/work-1.png">
-      </a>
-      <a href="https://drive.google.com" target="_blank" class="work-card">
-        <img src="images/work-2.png">
-      </a>
-      <a href="https://drive.google.com" target="_blank" class="work-card">
-        <img src="images/work-3.png">
-      </a>
+      <a href="https://drive.google.com" target="_blank" class="work"><img src="images/work-1.png"></a>
+      <a href="https://drive.google.com" target="_blank" class="work"><img src="images/work-2.png"></a>
+      <a href="https://drive.google.com" target="_blank" class="work"><img src="images/work-3.png"></a>
     </div>
-
-    <a href="#" class="btn">See More</a>
+    <a href="#" class="btn">See more</a>
   </div>
 </div>
 
-<!-- ================= SERVICES ================= -->
+<!-- SERVICES -->
 <div id="services">
   <div class="container">
-    <h1 class="sub-title">What I Do</h1>
-
+    <h1 class="sub-title">What I Can Help With</h1>
     <div class="services-list">
-      <div class="service-card">
-        <div class="front">Dry Lab</div>
-        <div class="back">Molecular Docking<br>Bioinformatics<br>Data Analysis</div>
-      </div>
-
-      <div class="service-card">
-        <div class="front">Graphic Design</div>
-        <div class="back">Logos<br>Posters<br>Publications<br>Books</div>
-      </div>
-
-      <div class="service-card">
-        <div class="front">Leadership</div>
-        <div class="back">Team Management<br>Strategy<br>Operations</div>
-      </div>
+      <div class="service-card"><div class="front">Dry Lab</div><div class="back">Docking<br>Bioinformatics<br>Data Analysis</div></div>
+      <div class="service-card"><div class="front">Graphic Design</div><div class="back">Logos<br>Posters<br>Booklets<br>Magazines</div></div>
+      <div class="service-card"><div class="front">Leadership</div><div class="back">Team Management<br>Strategy<br>Operations</div></div>
     </div>
   </div>
 </div>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <div id="contact">
   <div class="container">
     <h1 class="sub-title">Contact Me</h1>
-
     <form action="https://formsubmit.co/asbin.khanal@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
@@ -160,40 +132,18 @@
       <button type="submit" class="btn btn2">Send</button>
     </form>
   </div>
-
-  <div class="copyright">
-    <p>© Asbin Khanal | Built with intent</p>
-  </div>
 </div>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- SCRIPTS -->
 <script>
-/* Typewriter */
-const text = "Asbin";
-let i = 0;
-const speed = 150;
-const el = document.getElementById("typewriter");
-function typeWriter(){
-  if(i < text.length){
-    el.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-window.onload = typeWriter;
-
-/* Experience */
-function showExp(e,id){
-  document.querySelectorAll('.exp-detail').forEach(d=>d.classList.remove('active'));
-  document.querySelectorAll('.exp-item').forEach(i=>i.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  e.currentTarget.classList.add('active');
-}
-
-/* Mobile menu */
-function openmenu(){ document.getElementById("sidemenu").style.right="0"; }
-function closemenu(){ document.getElementById("sidemenu").style.right="-200px"; }
+const text="Asbin";let i=0;const el=document.getElementById("typewriter");
+(function type(){if(i<text.length){el.innerHTML+=text[i++];setTimeout(type,150)}})();
+function openTab(e,id){document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab-item').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');e.currentTarget.classList.add('active');}
+function openmenu(){sidemenu.style.right="0"}function closemenu(){sidemenu.style.right="-200px"}
 </script>
 
 </body>
 </html>
+
+
+
