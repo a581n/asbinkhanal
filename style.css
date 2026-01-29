@@ -70,33 +70,31 @@ nav ul li a:hover::after{
     color: #ff004f;
 }
 
+/* ======== UPDATED LOGO ANIMATION CODE ======== */
 /* Logo container for animation */
 .logo-container {
     position: relative;
     display: inline-block;
     width: 140px;
     height: 140px;
-    border-radius: 50%;
     transition: transform 0.5s ease;
 }
 
-/* Adjust the logo to fit inside the circular container */
+/* Keep original logo size and remove border-radius from logo */
 .logo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: contain;
+    width: 140px;
+    border-radius: 0; /* Remove this to keep logo square */
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-/* Hover effect for the logo container */
+/* Hover effect for the logo */
 .logo-container:hover .logo {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(255, 0, 79, 0.7);
 }
 
-/* Circular pop-out effect */
-.logo-container:hover::before {
+/* Circular pop-out effect - FIXED */
+.logo-container:hover::after {
     content: '';
     position: absolute;
     top: -10px;
@@ -105,23 +103,27 @@ nav ul li a:hover::after{
     bottom: -10px;
     border-radius: 50%;
     border: 2px solid #ff004f;
-    animation: pulse 1.5s infinite;
+    animation: pulse 1.5s infinite ease-in-out;
     z-index: -1;
+    pointer-events: none; /* Important: allows clicking through */
 }
 
-/* Animation for the circular pulse effect */
+/* Fixed pulse animation */
 @keyframes pulse {
     0% {
-        transform: scale(0.95);
-        opacity: 0.7;
+        transform: scale(0.9);
+        opacity: 0.8;
+        box-shadow: 0 0 0 0 rgba(255, 0, 79, 0.7);
     }
-    50% {
+    70% {
         transform: scale(1.1);
-        opacity: 0.3;
+        opacity: 0.4;
+        box-shadow: 0 0 0 10px rgba(255, 0, 79, 0);
     }
     100% {
-        transform: scale(0.95);
-        opacity: 0.7;
+        transform: scale(0.9);
+        opacity: 0.8;
+        box-shadow: 0 0 0 0 rgba(255, 0, 79, 0);
     }
 }
 
@@ -129,12 +131,7 @@ nav ul li a:hover::after{
 .logo-container:hover {
     transform: rotate(5deg);
 }
-
-/* Make sure the logo in nav still aligns properly */
-nav .logo-container {
-    width: 140px;
-    height: 140px;
-}
+/* ======== END OF UPDATED LOGO ANIMATION CODE ======== */
 
 /*-------------about---------*/
 #about{
@@ -454,4 +451,5 @@ nav .fas{
     display: block;
 
 }
+
 
