@@ -1,26 +1,23 @@
-<!-- ==========================
-FILE 1: index.html
-========================== -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asbin Khanal | Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asbin Khanal | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/71eb880d7b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-- HEADER -->
-<div id="header">
+<!-- ===== HEADER ===== -->
+<header id="header">
   <div class="container">
     <nav>
-      <a href="#about"><img src="images/logo.png" class="logo pop-logo"></a>
+      <a href="#about" class="logo">AK</a>
       <ul id="sidemenu">
         <li><a href="#header">Home</a></li>
-        <li><a href="#about">Summary</a></li>
-        <li><a href="#affiliations">Profile</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#portfolio">Work</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -33,117 +30,151 @@ FILE 1: index.html
       <h1>Hey! I'm <span id="typewriter"></span><br>Khanal.</h1>
     </div>
   </div>
-</div>
+</header>
 
-<!-- SUMMARY -->
-<div id="about">
+<!-- ===== ABOUT / SUMMARY ===== -->
+<section id="about">
   <div class="container">
     <div class="row">
-      <div class="about-col-1"><img src="images/user.png"></div>
+      <div class="about-col-1">
+        <img src="images/user.png" alt="Asbin Khanal" />
+      </div>
       <div class="about-col-2">
         <h1 class="sub-title">Summary</h1>
         <p>
-          I am a <strong>Biotechnology graduate from Kathmandu University</strong> with a solid academic foundation in
-          biological research, bioinformatics, and interdisciplinary scientific work. Alongside my academic journey,
-          I have spent over <strong>five years in youth leadership and organisational development</strong> through AIESEC,
-          leading national and international teams and managing large-scale initiatives.
+          I am a biotechnology undergraduate with a strong foundation in molecular biology, research methodologies, and bioinformatics, combined with over five years of leadership experience in international youth organizations. I have actively contributed to and led cross‑cultural teams through AIESEC, driving organizational growth, financial accountability, and sustainable impact initiatives.
           <br><br>
-          My experience spans <strong>wet lab and dry lab research</strong>, molecular docking, and data-driven analysis,
-          combined with extensive exposure to leadership roles across <strong>six countries</strong>. I am driven by
-          opportunities where science, leadership, and global impact intersect.
+          Beyond academics, I have represented Nepal across six countries through leadership programs, conferences, and international exchanges, gaining global exposure and a deep understanding of collaboration across diverse systems. My interests lie at the intersection of biotechnology research, dry‑lab analysis, and strategic leadership, where scientific thinking meets execution and people development.
         </p>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- AFFILIATIONS / TABS -->
-<div id="affiliations">
+<!-- ===== EXPERIENCE / EDUCATION / SKILLS (TABS) ===== -->
+<section id="experience">
   <div class="container">
-    <h1 class="sub-title">My Profile</h1>
+    <h1 class="sub-title">Background</h1>
 
-    <div class="tab-wrapper">
+    <div class="tab-container">
       <div class="tab-menu">
-        <div class="tab-item active" onclick="openTab(event,'org')">Organisations</div>
-        <div class="tab-item" onclick="openTab(event,'research')">Research</div>
-        <div class="tab-item" onclick="openTab(event,'education')">Education</div>
+        <button class="tab-btn active" onclick="openTab('exp')">Experience</button>
+        <button class="tab-btn" onclick="openTab('edu')">Education</button>
+        <button class="tab-btn" onclick="openTab('skills')">Skills</button>
       </div>
 
       <div class="tab-content">
-        <div id="org" class="tab-panel active">
+        <div id="exp" class="tab-panel active">
           <ul>
-            <li><span>AIESEC</span><br>Country Director (Nepal & Thailand), Local President (KU), National Finance & Legalities Head</li>
-            <li><span>Leo Clubs</span><br>District Treasurer, Charter President</li>
+            <li><strong>AIESEC (5+ years)</strong> – Leadership, finance, national & international roles</li>
+            <li><strong>Leo District Council</strong> – District Treasurer & Board roles</li>
+            <li><strong>KUBiC</strong> – Vice President</li>
           </ul>
         </div>
 
-        <div id="research" class="tab-panel">
+        <div id="edu" class="tab-panel">
           <ul>
-            <li><span>Dry Lab</span><br>Molecular Docking, Bioinformatics Analysis</li>
-            <li><span>Wet Lab</span><br>Antimicrobial & Secondary Metabolite Research</li>
+            <li><strong>Kathmandu University</strong> – B.Tech Biotechnology</li>
+            <li><strong>Trinity International College</strong> – +2 Science</li>
           </ul>
         </div>
 
-        <div id="education" class="tab-panel">
+        <div id="skills" class="tab-panel">
           <ul>
-            <li><span>Kathmandu University</span><br>B.Tech Biotechnology (Completed)</li>
-            <li><span>Trinity International College</span><br>+2 Science</li>
+            <li>Dry Lab Analysis & Bioinformatics Basics</li>
+            <li>Scientific Writing & Research Documentation</li>
+            <li>Graphic Design (Photoshop, InDesign)</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- WORK -->
-<div id="portfolio">
+<!-- ===== WORK ===== -->
+<section id="portfolio">
   <div class="container">
     <h1 class="sub-title">My Work</h1>
     <div class="work-slider">
-      <a href="https://drive.google.com" target="_blank" class="work"><img src="images/work-1.png"></a>
-      <a href="https://drive.google.com" target="_blank" class="work"><img src="images/work-2.png"></a>
-      <a href="https://drive.google.com" target="_blank" class="work"><img src="images/work-3.png"></a>
+      <a href="#" class="work-card"><img src="images/work-1.png" /></a>
+      <a href="#" class="work-card"><img src="images/work-2.png" /></a>
+      <a href="#" class="work-card"><img src="images/work-3.png" /></a>
     </div>
-    <a href="#" class="btn">See more</a>
   </div>
-</div>
+</section>
 
-<!-- SERVICES -->
-<div id="services">
+<!-- ===== SERVICES ===== -->
+<section id="services">
   <div class="container">
-    <h1 class="sub-title">What I Can Help With</h1>
+    <h1 class="sub-title">What I Do</h1>
     <div class="services-list">
-      <div class="service-card"><div class="front">Dry Lab</div><div class="back">Docking<br>Bioinformatics<br>Data Analysis</div></div>
-      <div class="service-card"><div class="front">Graphic Design</div><div class="back">Logos<br>Posters<br>Booklets<br>Magazines</div></div>
-      <div class="service-card"><div class="front">Leadership</div><div class="back">Team Management<br>Strategy<br>Operations</div></div>
+      <div class="service-box">
+        <h2>Dry Lab</h2>
+        <p>Bioinformatics analysis, data interpretation, research documentation.</p>
+      </div>
+      <div class="service-box">
+        <h2>Graphic Design</h2>
+        <p>Logos, banners, posters, publications, and reports.</p>
+      </div>
+      <div class="service-box">
+        <h2>Leadership & Strategy</h2>
+        <p>Organizational development, project management, team leadership.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- CONTACT -->
-<div id="contact">
+<!-- ===== CONTACT ===== -->
+<section id="contact">
   <div class="container">
-    <h1 class="sub-title">Contact Me</h1>
-    <form action="https://formsubmit.co/asbin.khanal@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="contact" placeholder="Your Contact">
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit" class="btn btn2">Send</button>
-    </form>
-  </div>
-</div>
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact</h1>
+        <p><i class="fa-solid fa-paper-plane"></i> asbin.khanal@gmail.com</p>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/its_me_asbin/"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/asbin.khanal.9"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/asbin-khanal/"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
 
-<!-- SCRIPTS -->
+      <div class="contact-right">
+        <form action="mailto:asbin.khanal@gmail.com" method="post" enctype="text/plain">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <input type="text" placeholder="Your Contact" />
+          <textarea rows="6" placeholder="Your Message"></textarea>
+          <button class="btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <script>
-const text="Asbin";let i=0;const el=document.getElementById("typewriter");
-(function type(){if(i<text.length){el.innerHTML+=text[i++];setTimeout(type,150)}})();
-function openTab(e,id){document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));document.querySelectorAll('.tab-item').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');e.currentTarget.classList.add('active');}
-function openmenu(){sidemenu.style.right="0"}function closemenu(){sidemenu.style.right="-200px"}
+// typewriter
+const text = "Asbin";
+let i = 0;
+const speed = 150;
+function type() {
+  if (i < text.length) {
+    document.getElementById("typewriter").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(type, speed);
+  }
+}
+window.onload = type;
+
+function openTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById(tab).classList.add('active');
+}
+
+function openmenu(){ document.getElementById("sidemenu").style.right = "0"; }
+function closemenu(){ document.getElementById("sidemenu").style.right = "-200px"; }
 </script>
 
 </body>
 </html>
-
-
-
